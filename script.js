@@ -1,20 +1,13 @@
 // basic calculator prograqm 
 
-const display = document.getElementById("display");
+// have gone back to the drawing board with the js that will be written 
 
-// you need 3 basic functions: a calculate or evaluate function, an appendtodisplay function, and a clearDisplay function 
+let currentNum = "";
+let previousNum = "";
+let operator = ""; 
 
+const currentDisplayNumber = document.querySelector("currentNum");
+const previousDisplayNumber = document.querySelector("previousNum"); 
 
-function appendToDisplay(input) {
-    display.value += input;
-}
+// made some basic variables, somewhat stumped on the direction that I need to take 
 
-
-function clearDisplay() {
-    display.value = "";
-}
-
-
-function calculate() {
-    display.value
-}

@@ -27,10 +27,10 @@ button{
     overflow: hidden;
 }
 
-#display{
+#output{
     width: 500px;
     padding:20px;
-    font-size: 5rem;
+    font-size: 10rem;
     text-align: left;
     border: none;
     background-color: hsl(0, 0%, 10%);

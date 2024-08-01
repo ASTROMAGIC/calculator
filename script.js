@@ -2,12 +2,12 @@
 
 // have gone back to the drawing board with the js that will be written 
 
-let currentNum = "";
-let previousNum = "";
-let operator = ""; 
 
-const currentDisplayNumber = document.querySelector("currentNum");
-const previousDisplayNumber = document.querySelector("previousNum"); 
+// I have now had time to read the code of other people who have completed this project and this what I believe I need so far; 
 
-// made some basic variables, somewhat stumped on the direction that I need to take 
+// Variables for my buttons, my operators, and my display
+
+// lots of these will contain empty strings 
+
+// there is no need for button onclick functions in my html file. 
 

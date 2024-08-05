@@ -1,4 +1,4 @@
-// basic calculator prograqm 
+// basic calculator program
 
 // have gone back to the drawing board with the js that will be written 
 
@@ -10,4 +10,6 @@
 // lots of these will contain empty strings 
 
 // there is no need for button onclick functions in my html file. 
+
+// functions for evaluation and clearing my screen 
 

@@ -1,3 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
 button{
     width: 90px;
     height: 90px;
@@ -5,15 +16,15 @@ button{
     border:none;
     background-color: hsl(0, 0%, 30%);
     color:white;
-    font-size: 3em;
-    font-weight: bold;
+    font-size: 2em;
+    font-weight: light;
     cursor: pointer;
 }
 
 
 #keys{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap:10px;
     padding:20px;
     background-color: hsl(0, 0%, 20%);
@@ -69,4 +80,30 @@ button:active{
 
 .operator-btn:active{
     background-color: hsl(298, 64%, 70%);
+}
+
+.numberZero {
+    border: none;
+    grid-column: span 2;
+    border-radius: 130px;
+    width: 250px;
+    border: none;
+
+
+}
+
+.clear {
+    background-color: grey;
+}
+
+.negative {
+    background-color: grey;
+}
+
+.percentage {
+    background-color: grey;
+}
+
+.decimal {
+    background-color: hsl(0, 0%, 30%); 
 }

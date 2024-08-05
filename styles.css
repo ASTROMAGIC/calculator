@@ -1,11 +1,11 @@
 button{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50px;
     border:none;
     background-color: hsl(0, 0%, 30%);
     color:white;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: bold;
     cursor: pointer;
 }
@@ -27,14 +27,18 @@ button{
     overflow: hidden;
 }
 
-#output{
-    width: 500px;
-    padding:20px;
-    font-size: 10rem;
-    text-align: left;
-    border: none;
-    background-color: hsl(0, 0%, 10%);
+.output{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     color: white;
+    height: 40%;
+}
+
+.output span {
+    margin-right: 60px;
+    font-size: 100px;
+    justify-self: flex-end;
 }
 
 body{

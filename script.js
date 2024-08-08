@@ -7,6 +7,16 @@
 
 // Variables for my buttons, my operators, and my display
 
+const numbers = document.querySelectorAll('.number-btn');
+const result = document.querySelectorAll('.output span');
+const operators = document.querySelectorAll('.operator-btn');
+const equals = document.querySelector('.operator-btn equals');
+const clear = document.querySelector('.operator-btn clear');
+const negative = document.querySelector('.operator-btn negative');
+const percent = document.querySelector('.operator-btn percentage');
+
+
+
 // lots of these will contain empty strings 
 
 // there is no need for button onclick functions in my html file. 

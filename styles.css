@@ -93,14 +93,30 @@ button:active{
     background-color: grey;
 }
 
+.clear:hover{
+    background-color: rgb(163, 163, 163);
+}
+
 .negative {
     background-color: grey;
+}
+
+.negative:hover{
+    background-color: rgb(163, 163, 163);
 }
 
 .percentage {
     background-color: grey;
 }
 
+.percentage:hover{
+    background-color: rgb(163, 163, 163);
+}
+
 .decimal {
     background-color: hsl(0, 0%, 30%); 
+}
+
+.decimal:hover{
+    background-color: rgb(163, 163, 163);
 }

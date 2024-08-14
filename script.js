@@ -7,14 +7,14 @@
 
 // Variables for my buttons, my operators, and my display
 
-const numbers = document.querySelectorAll('.number-btn');
+const numbers = document.querySelectorAll('.numberbtn');
 const result = document.querySelector('.output span');
 
-const operators = document.querySelectorAll('.operator-btn');
-const equals = document.querySelector('.operator-btn equals');
-const clear = document.querySelector('.operator-btn clear');
-const negative = document.querySelector('.operator-btn negative');
-const percent = document.querySelector('.operator-btn percentage');
+const operators = document.querySelectorAll('.operatorbtn');
+const equals = document.querySelector('.operatorbtn equals');
+const clear = document.querySelector('.operatorbtn clear');
+const negative = document.querySelector('.operatorbtn negative');
+const percent = document.querySelector('.operatorbtn percentage');
 
 
 

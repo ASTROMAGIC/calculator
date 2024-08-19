@@ -7,7 +7,7 @@
 
 // Variables for my buttons, my operators, and my display
 
-const numbers = document.querySelectorAll('.numberbtn');
+const numbers = document.querySelectorAll('.numbers');
 const result = document.querySelector('.output span');
 
 const operators = document.querySelectorAll('.operatorbtn');
@@ -33,6 +33,9 @@ for (let i = 0; i < numbers.length; i++) {
         if(isFirstValue === false) {
             getFirstValue(atr)
         }
+        if(isSecondValue == false) {
+            getSecondValue(atr);
+        }
     })       
 }       
     
@@ -41,6 +44,14 @@ function getFirstValue(el) {
     firstValue += el; 
     result.innerHTML = firstValue;
     firstValue = +firstValue;
+}
+
+function getSecondValue(el) {
+   if(firstValue != "" && sign != "") {
+    secondValue += el; 
+    result.innerHTML = secondValue; 
+    secondValue = secondValue;
+   }
 }
 
 // there is no need for button onclick functions in my html file. 

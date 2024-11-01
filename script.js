@@ -22,16 +22,15 @@ let display = document.getElementById('display');
 
 // here is a function that will allow me to store numbers in my array for eventual calculations 
 
-function getNumber(num) {
-    if(step === 0 || step === 1) {
+function pushNumber(num) {
+    if(step === 0 || step === 1){
         numArray.push(num) // [1, 2, 3, 4...]
         step = 1 // inputting the first number is step 1
         firstNumber = Number(numArray.join('')) // this merges the array into one string and that string will become a number
         display.value = firstNumber
     } else if (step === 2){
         secondNumArray.push(num)
-        secondNumArray = Number(secondNumArray.join(''))
-
+        secondNumber = Number(secondNumArray.join(''))
         display.value = secondNumber
     }
     

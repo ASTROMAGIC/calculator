@@ -10,32 +10,36 @@
 <body>
     
     <div id="calculator">
-        <div class="output">
-            <span>0</span>
-        </div>
-        
-        <div id="keys">
-            <button class="operatorbtn clear">AC</button>
-            <button class="operatorbtn negative">+/-</button>
-            <button class="operatorbtn percentage">%</button>
-            <button class="operatorbtn">/</button>
-            <button class="numbers">7</button>
-            <button class="numbers">8</button>
-            <button class="numbers">9</button>
-            <button class="operatorbtn">x</button>
-            <button class="numbers">4</button>
-            <button class="numbers">5</button>
-            <button class="numbers">6</button>
-            <button class="operatorbtn">-</button>
-            <button class="numbers">1</button>
-            <button class="numbers">2</button>
-            <button class="numbers">3</button>
-            <button class="operatorbtn">+</button>
-            <button class="numbers numberZero">0</button>
-            <button class="operatorbtn decimal">.</button>
-            <button class="operatorbtn equals">=</button>
-        </div>
-    </div>
+        <section class = "header">
+            <h1>MAGIC CALCULATOR</h1>
+            <input type="text" id="display" readonly>
+
+        </section>
+
+    <section class="buttons">
+            <button onclick="getNumber(1)">1</button>
+            <button onclick="getNumber(2)">2</button>
+            <button onclick="getNumber(3)">3</button>
+            <button onclick="getOperator('+')">+</button>
+
+            <button onclick="getNumber(4)">4</button>
+            <button onclick="getNumber(5)">5</button>
+            <button onclick="getNumber(6)">6</button>
+            <button onclick="getOperator('-')">-</button>
+
+            <button onclick="getNumber(7)">7</button>
+            <button onclick="getNumber(8)">8</button>
+            <button onclick="getNumber(9)">9</button>
+            <button onclick="getOperator('*')">*</button>
+
+            <button onclick="clearDisplay()">CE</button>
+            <button onclick="getNumber('0')">0</button>
+            <button onclick="calculateEquals()">=</button>
+            <button onclick="getOperator('/')">/</button>
+
+        </section>
+       
+     </div>
 
     <scipt src="script.js"></scipt>
 </body>

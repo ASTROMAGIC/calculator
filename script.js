@@ -2,59 +2,82 @@
 
 // have gone back to the drawing board with the js that will be written 
 
+// I have gone back to the drawing board, did 3 iterations of this project and found what I thought were the best practices. I'm going to iterate upon this original calculator and see if I can apply what I learned from the two practices projects I did. 
 
-// I have now had time to read the code of other people who have completed this project and this what I believe I need so far; 
+let firstNumber 
+let secondNumber 
+let step = 0; 
+let operation
+let result = 0; 
 
-// Variables for my buttons, my operators, and my display
+// These variables are to keep the steps of my operations and hold my result 
 
-const numbers = document.querySelectorAll('.numbers');
-const result = document.querySelector('.output span');
+// I want to organize the information containing my numbers and operations into an array, which will be shown in my display 
 
-const operators = document.querySelectorAll('.operatorbtn');
-const equals = document.querySelector('.operatorbtn equals');
-const clear = document.querySelector('.operatorbtn clear');
-const negative = document.querySelector('.operatorbtn negative');
-const percent = document.querySelector('.operatorbtn percentage');
+let numArray = [];
+let secondNumArray = [];
+
+let display = document.getElementById('display');
 
 
+// here is a function that will allow me to store numbers in my array for eventual calculations 
 
-// lots of these will contain empty strings 
+function getNumber(num) {
+    if(step === 0 || step === 1) {
+        numArray.push(num) // [1, 2, 3, 4...]
+        step = 1 // inputting the first number is step 1
+        firstNumber = Number(numArray.join('')) // this merges the array into one string and that string will become a number
+        display.value = firstNumber
+    } else if (step === 2){
+        secondNumArray.push(num)
+        secondNumArray = Number(secondNumArray.join(''))
 
-let firstValue = "";
-let isFirstValue = false; 
-let secondValue = "";
-let isSecondValue = false; 
-let sign = "";
-let resultValue = 0; 
-
-for (let i = 0; i < numbers.length; i++) {
-    numbers[i].addEventListener('click', (e) => {
-        let atr = e.target.getAttribute('value');
-        if(isFirstValue === false) {
-            getFirstValue(atr)
-        }
-        if(isSecondValue == false) {
-            getSecondValue(atr);
-        }
-    })       
-}       
+        display.value = secondNumber
+    }
     
-function getFirstValue(el) {
-    result.innerHTML = "";
-    firstValue += el; 
-    result.innerHTML = firstValue;
-    firstValue = +firstValue;
 }
 
-function getSecondValue(el) {
-   if(firstValue != "" && sign != "") {
-    secondValue += el; 
-    result.innerHTML = secondValue; 
-    secondValue = secondValue;
-   }
+// now let us make a function to add in our operator into step 2 specifically
+
+function getOperator(op) {
+    step = 2
+    operation = op
 }
 
-// there is no need for button onclick functions in my html file. 
+// now for a function that will clear our display 
 
-// functions for evaluation and clearing my screen 
+function clearDisplay() {
+    display.value = 0
+    firstNumber = null; 
+    secondNumber = null; 
+    step = 0; 
+    operation = null; 
+    result = 0; 
+    numArray = [];
+    secondNumArray = [];
+}
+
+// I think this is a solid way to make sure that everything we are working with is either empty or has no current workable value. 
+
+// finally we will store our calculate function in a constant variable 
+
+const calculateEquals = () => {
+    if(operation === '+') {
+        result = firstNumber + secondNumber
+        display.value = result; 
+    } else if (operation === '-'){
+        result = firstNumber - secondNumber
+        display.value = result; 
+    } else if (operation === '*'){
+        result = firstNumber * secondNumber
+        display.value = result;
+    } else if (operation === '/'){
+        result = firstNumber / secondNumber
+        display.value = result;
+    }
+}
+
+// let's check for functionality 
+
+
 

@@ -1,62 +1,59 @@
 
 
 body {
-    min-height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
 }
 
-button{
-    width: 90px;
-    height: 90px;
-    border-radius: 50px;
-    border:none;
-    background-color: hsl(0, 0%, 30%);
-    color:white;
-    font-size: 2em;
-    font-weight: light;
-    cursor: pointer;
-}
-
-
-#keys{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap:10px;
-    padding:20px;
-    background-color: hsl(0, 0%, 20%);
-}
-
-#calculator{
-    font-family: Arial, Helvetica, sans-serif;
+.container {
+    margin: 10vh auto;
+    width: 500px;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
     background-color: black;
-    border-radius: 15px;
-    width:500px;
-    overflow: hidden;
 }
 
-.output{
+
+.header {
+    margin: 2rem;
+    color: lightpink;
+    
+}
+
+input {
+    width: 370px;
+    padding: .5rem 2rem; 
+    font-size: 3rem; 
+    border-radius: 10px; 
+    text-align: right;
+    background-color: lightcoral;
+    color: black;
+}
+
+button {
+    padding: 40px;
+    font-size: 20px;
+    margin: .5rem; 
+    max-width: 100px;
+    max-height: 100px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 900;
+    background-color: pink;
+    color: black;
+}
+
+
+.buttons {
+    margin: auto;
+    width: 500px;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    color: white;
-    height: 40%;
-}
-
-.output span {
-    margin-right: 60px;
-    font-size: 100px;
-    justify-self: flex-end;
-}
-
-body{
-    margin:0;
-    display:flex; 
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: hsl(0, 0%, 95%);
 }
+
+
 
 button:hover{
     background-color: hsl(0, 0%, 40%);
@@ -66,57 +63,3 @@ button:active{
     background-color: hsl(0, 0%, 50%);
 }
 
-.operatorbtn{
-    background-color: hsl(298, 76%, 55%);
-}
-
-.operatorbtn:hover{
-    background-color: hsl(298, 79%, 65%);
-}
-
-
-.operatorbtn:active{
-    background-color: hsl(298, 64%, 70%);
-}
-
-.numberZero {
-    border: none;
-    grid-column: span 2;
-    border-radius: 130px;
-    width: 210px;
-    border: none;
-
-
-}
-
-.clear {
-    background-color: grey;
-}
-
-.clear:hover{
-    background-color: rgb(163, 163, 163);
-}
-
-.negative {
-    background-color: grey;
-}
-
-.negative:hover{
-    background-color: rgb(163, 163, 163);
-}
-
-.percentage {
-    background-color: grey;
-}
-
-.percentage:hover{
-    background-color: rgb(163, 163, 163);
-}
-
-.decimal {
-    background-color: hsl(0, 0%, 30%); 
-}
-
-.decimal:hover{
-    background-color: rgb(163, 163, 163);
-}
